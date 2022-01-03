@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
- import { BrowserRouter as Router , Route, Routes } from "react-router-dom";
+ import { BrowserRouter as Router , Route, Switch } from "react-router-dom";
 import { uuid } from "uuidv4";
 import "./App.css";
 import Header from "./Header";
@@ -36,7 +36,7 @@ function App() {
     <div className="ui container">
       <Router>
       <Header />
-      <Routes>
+      <Switch>
       <Route
       exact
       path='/'
@@ -53,10 +53,15 @@ function App() {
       <Route
       path='/add'
       exact
-      element={<AddContact />}>
-        
+      render={(props)=>{
+        <AddContact
+        {...props}
+        addContactHandler={addContactHandler}
+        />
+      }}
+      >  
       </Route>
-      </Routes>
+      </Switch>
       {/* <AddContact addContactHandler={addContactHandler} /> */}
       {/* <ContactList contacts={contacts} getContactId={removeContactHandler} /> */}
       </Router>

@@ -9,7 +9,7 @@ const ContactList = (props) => {
     props.getContactId(id);
   };
 
-  // const contacts=[{
+//   const contacts=[{
 //     id:"1",
 //     name:"Subin",
 //     email:"subin@gmail.com",
