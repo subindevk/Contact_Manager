@@ -50,7 +50,7 @@ function App() {
 						path="/add"
 						exact
 						element={<AddContact addContactHandler={addContactHandler} />}
-					></Route>
+					></Route> 
 				</Routes>
 				{/* <AddContact addContactHandler={addContactHandler} /> */}
 				{/* <ContactList contacts={contacts} getContactId={removeContactHandler} /> */}
