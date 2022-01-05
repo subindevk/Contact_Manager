@@ -1,10 +1,13 @@
 import React from "react";
+import {Link}  from 'react-router-dom'
+import { withRouter } from "./withRouter";
 
 class AddContact extends React.Component {
   state = {
     name: "",
     email: "",
   };
+
 
 
   add = (e) => {
@@ -15,7 +18,7 @@ class AddContact extends React.Component {
     }
     this.props.addContactHandler(this.state);
     this.setState({ name: "", email: "" });
-    this.props.history.push('/')
+    this.props.navigate('/')
 
   };
   render() {
@@ -43,11 +46,12 @@ class AddContact extends React.Component {
               onChange={(e) => this.setState({ email: e.target.value })}
             />
           </div>
-          <button className="ui button blue right" >Add</button> 
+          <button className="ui button blue right">Add</button> 
+          <button><Link to ={'/'}>Contact list</Link></button>
         </form>
       </div>
     );
   }
 }
 
-export default AddContact;
+export default withRouter(AddContact);
