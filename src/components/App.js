@@ -34,7 +34,7 @@ function App() {
 
 	return (
 		<div className="ui container">
-			<Router>
+		
 				<Header />
 				<Routes>
 					<Route
@@ -59,7 +59,7 @@ function App() {
 				</Routes>
 				{/* <AddContact addContactHandler={addContactHandler} /> */}
 				{/* <ContactList contacts={contacts} getContactId={removeContactHandler} /> */}
-			</Router>
+		
 		</div>
 	);
 }
