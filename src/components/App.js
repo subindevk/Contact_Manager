@@ -34,32 +34,31 @@ function App() {
 
 	return (
 		<div className="ui container">
-			<Router>
-				<Header />
-				<Routes>
-					<Route
-						exact
-						path="/"
-						element={
-							<ContactList
-								contacts={contacts}
-								getContactId={removeContactHandler}
-							/>
-						}
-					></Route>
-					<Route
-						path="/add"
-						exact
-						element={<AddContact addContactHandler={addContactHandler} />}
-					></Route> 
-					<Route
-					   path='/contact/:id' exact element={<ContactDetails />}>
-
-					   </Route>
-				</Routes>
-				{/* <AddContact addContactHandler={addContactHandler} /> */}
-				{/* <ContactList contacts={contacts} getContactId={removeContactHandler} /> */}
-			</Router>
+			<Header />
+			<Routes>
+				<Route
+					exact
+					path="/"
+					element={
+						<ContactList
+							contacts={contacts}
+							getContactId={removeContactHandler}
+						/>
+					}
+				></Route>
+				<Route
+					path="/add"
+					exact
+					element={<AddContact addContactHandler={addContactHandler} />}
+				></Route>
+				<Route
+					path="/contact/:contact/:email"
+					exact
+					element={<ContactDetails />}
+				></Route>
+			</Routes>
+			{/* <AddContact addContactHandler={addContactHandler} /> */}
+			{/* <ContactList contacts={contacts} getContactId={removeContactHandler} /> */}
 		</div>
 	);
 }
