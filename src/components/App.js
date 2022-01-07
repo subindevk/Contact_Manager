@@ -53,7 +53,7 @@ function App() {
 						element={<AddContact addContactHandler={addContactHandler} />}
 					></Route> 
 					<Route
-					   path='/contact/:name' exact element={<ContactDetails />}>
+					   path='/contact/:id' exact element={<ContactDetails />}>
 
 					   </Route>
 				</Routes>
