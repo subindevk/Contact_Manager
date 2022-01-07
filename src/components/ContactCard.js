@@ -10,7 +10,7 @@ const ContactCard = (props) => {
 			<div className="content">
 				<Link
 					to={{
-						pathname: "/contact/" + name,
+						pathname: "/contact/" + name + "/" + email,
 						state: { contact: props.contact },
 					}}
 				>
